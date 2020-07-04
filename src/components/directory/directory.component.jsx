@@ -1,9 +1,26 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 
-import {DirectoryContainer} from './directory.styles';
+import {ReactComponent as Arrow} from '../../assets/arrow.svg';
 
-const Directory = () => (
-    <DirectoryContainer />
-);
+import {DirectoryContainer, CollectionTitle, ShopNow} from './directory.styles';
 
-export default Directory;
+const Directory = ({collection, history, match}) => {
+
+    const {collectionImage, season, title} = collection;
+
+    const collectionUrl = `shop/${title.toLowerCase()}`
+    console.log(collectionUrl);
+
+    return(
+        <DirectoryContainer collectionImage={collectionImage}>
+            <CollectionTitle>
+                {title}'s Collection
+                <span>- {season}</span>
+            </CollectionTitle>
+            <ShopNow onClick={() => history.push(`${match.url}${collectionUrl}`)}>Shop now <Arrow /></ShopNow>
+        </DirectoryContainer>
+    );
+};
+
+export default withRouter(Directory);

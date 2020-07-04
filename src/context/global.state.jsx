@@ -32,11 +32,18 @@ export const GlobalProvider = ({children}) => {
         }
     }
 
+    function selectCollection(collectionName) {
+        const collection = state.collections[collectionName];
+        return collection;
+    };
+
     return (
         <GlobalContext.Provider value={{
             collections: state.collections,
             cart: state.cart,
-            fetchCollections
+            error: state.error,
+            fetchCollections,
+            selectCollection
         }}>
             {children}
         </GlobalContext.Provider>

@@ -8,12 +8,12 @@ import {ReactComponent as Cart} from '../../assets/cart.svg';
 
 const Header = () => (
     <HeaderContainer>
-        <HeaderCompanyName>Clothing Company</HeaderCompanyName>
+        <HeaderCompanyName><Link to="/">Clothing Company</Link></HeaderCompanyName>
         <HeaderNavigation>
             <ul>
-                <HeaderNavigationItem><Link to="/">Products</Link></HeaderNavigationItem>
+                <HeaderNavigationItem><Link to="/">Shop</Link></HeaderNavigationItem>
                 <HeaderNavigationItem><Link to="/">Sale</Link></HeaderNavigationItem>
-                <HeaderNavigationItem><Link to="/">About</Link></HeaderNavigationItem>
+                <HeaderNavigationItem><Link to="/about">About</Link></HeaderNavigationItem>
             </ul>
         </HeaderNavigation>
         <Link to="/cart"><Cart/></Link>

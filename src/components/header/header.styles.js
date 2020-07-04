@@ -16,6 +16,10 @@ export const HeaderContainer = styled.div`
 
 export const HeaderCompanyName = styled.div`
     font-size: 20px;
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
 `;
 
 export const HeaderNavigation = styled.nav`
