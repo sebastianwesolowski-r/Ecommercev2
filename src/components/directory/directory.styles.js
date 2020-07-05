@@ -12,7 +12,7 @@ export const DirectoryContainer = styled.div`
     padding: 0 60px;
 `;
 
-export const CollectionTitle = styled.div`
+export const DirectoryTitle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;

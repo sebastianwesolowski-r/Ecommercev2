@@ -3,7 +3,7 @@ import {withRouter} from 'react-router-dom';
 
 import {ReactComponent as Arrow} from '../../assets/arrow.svg';
 
-import {DirectoryContainer, CollectionTitle, ShopNow} from './directory.styles';
+import {DirectoryContainer, DirectoryTitle, ShopNow} from './directory.styles';
 
 const Directory = ({collection, history, match}) => {
 
@@ -14,10 +14,10 @@ const Directory = ({collection, history, match}) => {
 
     return(
         <DirectoryContainer collectionImage={collectionImage}>
-            <CollectionTitle>
+            <DirectoryTitle>
                 {title}'s Collection
                 <span>- {season}</span>
-            </CollectionTitle>
+            </DirectoryTitle>
             <ShopNow onClick={() => history.push(`${match.url}${collectionUrl}`)}>Shop now <Arrow /></ShopNow>
         </DirectoryContainer>
     );
