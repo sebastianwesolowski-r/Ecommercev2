@@ -15,7 +15,7 @@ export const HeaderContainer = styled.div`
 `;
 
 export const HeaderCompanyName = styled.div`
-    font-size: 20px;
+    font-size: 25px;
     a {
         text-decoration: none;
         color: #000000;
@@ -23,7 +23,7 @@ export const HeaderCompanyName = styled.div`
 `;
 
 export const HeaderNavigation = styled.nav`
-    width: 400px;
+    width: 180px;
     position: absolute;
     left: 0;
     right: 0;
@@ -32,6 +32,7 @@ export const HeaderNavigation = styled.nav`
         ${displayFlex};
         width: 100%;
         list-style-type: none;
+        padding: 0;
     }
 `;
 

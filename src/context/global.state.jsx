@@ -37,13 +37,35 @@ export const GlobalProvider = ({children}) => {
         return collection;
     };
 
+    function addItemToCart(item) {
+        dispatch({
+            type: ActionTypes.ADD_ITEM_TO_CART,
+            payload: item
+        });
+    };
+
+    function removeItemFromCart(item) {
+        dispatch({
+            type: ActionTypes.REMOVE_ITEM_FROM_CART,
+            payload: item
+        });
+    };
+
+    function selectItemQuantity(itemId) {
+        const selectedItem = state.cart.find(cartItem => cartItem.id === itemId);
+        return selectedItem.quantity;
+    }
+
     return (
         <GlobalContext.Provider value={{
             collections: state.collections,
             cart: state.cart,
             error: state.error,
             fetchCollections,
-            selectCollection
+            selectCollection,
+            addItemToCart,
+            removeItemFromCart,
+            selectItemQuantity
         }}>
             {children}
         </GlobalContext.Provider>

@@ -12,7 +12,6 @@ const Header = () => (
         <HeaderNavigation>
             <ul>
                 <HeaderNavigationItem><Link to="/">Shop</Link></HeaderNavigationItem>
-                <HeaderNavigationItem><Link to="/">Sale</Link></HeaderNavigationItem>
                 <HeaderNavigationItem><Link to="/about">About</Link></HeaderNavigationItem>
             </ul>
         </HeaderNavigation>

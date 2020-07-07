@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const DirectoryContainer = styled.div`
     position: relative;
     width: 100%;
-    height: 80%;
+    height: 70%;
     max-height: 620px;
     background-image: url(${props => props.collectionImage});
     background-size: contain;

@@ -1,5 +1,7 @@
 import ActionTypes from './app.types';
 
+import {addItemToCart} from './app.utils';
+
 const AppReducer = (state, action) => {
     switch(action.type) {
         case ActionTypes.FETCH_COLLECTIONS_SUCCESS:
@@ -13,6 +15,16 @@ const AppReducer = (state, action) => {
                 ...state,
                 collections: null,
                 error: action.payload
+            };
+        case ActionTypes.ADD_ITEM_TO_CART:
+            return {
+                ...state,
+                cart: addItemToCart(state.cart, action.payload)
+            };
+        case ActionTypes.REMOVE_ITEM_FROM_CART:
+            return {
+                ...state,
+                cart: state.cart.filter(cartItem => cartItem.id !== action.payload.id)
             };
         default: return state;
     };
