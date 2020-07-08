@@ -11,11 +11,10 @@ import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shoppage/shoppage.component';
 import AboutPage from './pages/aboutpage/aboutpage.component';
 import CartPage from './pages/cartpage/cartpage.component';
-import ErrorPage from './pages/errorpage/errorpage.component';
 
 function App() {
 
-  const {fetchCollections, collections, error} = useContext(GlobalContext);
+  const {fetchCollections, collections} = useContext(GlobalContext);
 
   useEffect(() => {
     fetchCollections();
@@ -33,10 +32,6 @@ function App() {
             <Route exact path="/cart" component={CartPage} />
           </>
         ) : null
-      }
-      {
-        error &&
-          <ErrorPage />
       }
     </>
   );

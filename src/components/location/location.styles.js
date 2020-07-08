@@ -5,6 +5,12 @@ export const LocationsContainer = styled.div`
     align-items: flex-start;
     position: absolute;
     bottom: 60px;
+    @media (max-width: 800px) {
+        flex-direction: column;
+        position: static;
+        bottom: 0;
+        margin: 40px 0;
+    }
 `;
 
 export const Location = styled.div`
@@ -19,5 +25,8 @@ export const Location = styled.div`
         font-weight: 400;
         text-align: center;
         margin-top: 15px;
+    }
+    @media (max-width: 800px) {
+        margin: 10px 0;
     }
 `;

@@ -12,6 +12,10 @@ export const HeaderContainer = styled.div`
     height: 60px;
     position: relative;
     padding-top: 40px;
+    @media (max-width: 800px) {
+        flex-direction: column;
+        height: 180px;
+    }
 `;
 
 export const HeaderCompanyName = styled.div`
@@ -33,6 +37,9 @@ export const HeaderNavigation = styled.nav`
         width: 100%;
         list-style-type: none;
         padding: 0;
+    }
+    @media (max-width: 800px) {
+        position: static;
     }
 `;
 

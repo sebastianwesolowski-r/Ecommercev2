@@ -26,6 +26,11 @@ const AppReducer = (state, action) => {
                 ...state,
                 cart: state.cart.filter(cartItem => cartItem.id !== action.payload.id)
             };
+        case ActionTypes.CLEAR_CART:
+            return {
+                ...state,
+                cart: []
+            };
         default: return state;
     };
 };

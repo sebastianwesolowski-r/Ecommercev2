@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useContext} from 'react';
 
 import {GlobalContext} from '../../context/global.state';
 
@@ -22,7 +22,7 @@ const CollectionItem = ({item, inCart}) => {
 
     return (
         <ItemContainer>
-            <ItemImage src={itemImg} />
+            <ItemImage itemImg={itemImg} />
             <CartButton onClick={() => {inCart ? removeItemFromCart(item) : addItemToCart(item)}}>{inCart ? 'Remove from cart' : 'Add to cart'}</CartButton>
             <p>{itemHeading}</p>
             <ItemPrice>${itemPrice} {inCart && itemQuantity > 1 ? <span>({itemQuantity})</span> : null}</ItemPrice>

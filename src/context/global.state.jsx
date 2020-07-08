@@ -54,18 +54,24 @@ export const GlobalProvider = ({children}) => {
     function selectItemQuantity(itemId) {
         const selectedItem = state.cart.find(cartItem => cartItem.id === itemId);
         return selectedItem.quantity;
-    }
+    };
+
+    function clearCart() {
+        dispatch({
+            type: ActionTypes.CLEAR_CART
+        });
+    };
 
     return (
         <GlobalContext.Provider value={{
             collections: state.collections,
             cart: state.cart,
-            error: state.error,
             fetchCollections,
             selectCollection,
             addItemToCart,
             removeItemFromCart,
-            selectItemQuantity
+            selectItemQuantity,
+            clearCart
         }}>
             {children}
         </GlobalContext.Provider>

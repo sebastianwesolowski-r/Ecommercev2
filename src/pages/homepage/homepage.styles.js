@@ -6,7 +6,11 @@ export const HomepageContainer = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-top: 180px;
+    padding-top: 150px;
+    @media (max-width: 800px) {
+        height: calc(100% - 180px);
+        padding-top: 60px;
+    }
 `;
 
 export const DirectoryNavigation = styled.div`
@@ -16,6 +20,9 @@ export const DirectoryNavigation = styled.div`
     width: 60px;
     height: 15px;
     margin-top: 50px;
+    @media (max-width: 800px) {
+        margin-top: 25px;
+    }
 `;
 
 export const NavigationDot = styled.div`

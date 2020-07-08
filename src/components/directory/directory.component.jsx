@@ -9,7 +9,7 @@ const Directory = ({collection, history, match}) => {
 
     const {collectionImage, season, title} = collection;
 
-    const collectionUrl = `shop/${title.toLowerCase()}`
+    const collectionUrl = `shop/${title.toLowerCase()}`;
 
     return(
         <DirectoryContainer collectionImage={collectionImage}>

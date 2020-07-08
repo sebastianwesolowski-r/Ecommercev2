@@ -15,7 +15,7 @@ export const ItemContainer = styled.div`
         margin: 4px 0;
     }
     &:hover {
-        img {
+        > div {
             filter: brightness(0.65);
         }
         button {
@@ -24,10 +24,14 @@ export const ItemContainer = styled.div`
     }
 `;
 
-export const ItemImage = styled.img`
+export const ItemImage = styled.div`
     width: 220px;
     height: 200px;
     margin-bottom: 5px;
+    background-image: url(${props => props.itemImg});
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 `;
 
 export const ItemPrice = styled.div`

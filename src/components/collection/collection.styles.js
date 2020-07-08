@@ -16,7 +16,7 @@ export const CollectionTitle = styled.div`
     font-size: 20px;
     letter-spacing: 2px;
     span {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
         letter-spacing: 0;
     }

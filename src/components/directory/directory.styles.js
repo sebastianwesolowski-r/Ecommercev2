@@ -3,13 +3,15 @@ import styled from 'styled-components';
 export const DirectoryContainer = styled.div`
     position: relative;
     width: 100%;
-    height: 70%;
-    max-height: 620px;
+    height: 570px;
     background-image: url(${props => props.collectionImage});
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     padding: 0 60px;
+    @media (max-width: 800px) {
+        height: 400px;
+    }
 `;
 
 export const DirectoryTitle = styled.div`
@@ -24,6 +26,14 @@ export const DirectoryTitle = styled.div`
         font-size: 16px;
         margin-top: 25px;
     }
+    @media (max-width: 800px) {
+        top: 8%;
+        font-size: 25px;
+        span {
+            font-size: 17px;
+            margin-top: 10px;
+        }
+    }
 `;
 
 export const ShopNow = styled.div`
@@ -31,10 +41,15 @@ export const ShopNow = styled.div`
     align-items: center;
     position: absolute;
     right: 120px;
-    bottom: 8%;
+    bottom: 10%;
     font-size: 16px;
     cursor: pointer;
     svg {
         margin-left: 15px;
+    }
+    @media (max-width: 800px) {
+        right: 180px;
+        bottom: 4%;
+        font-size: 24px;
     }
 `;

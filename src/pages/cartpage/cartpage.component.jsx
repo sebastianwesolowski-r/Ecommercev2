@@ -10,7 +10,7 @@ import {GlobalContext} from '../../context/global.state';
 
 const CartPage = () => {
 
-    const {cart} = useContext(GlobalContext);
+    const {cart, clearCart} = useContext(GlobalContext);
 
     const totalItems = cart.reduce((accumulator, cartItem) => accumulator + cartItem.quantity, 0);
     const totalPrice = cart.reduce((accumulator, cartItem) => accumulator + cartItem.quantity * cartItem.itemPrice, 0);
@@ -36,7 +36,8 @@ const CartPage = () => {
             }
             <CheckoutFooter>
                 Total: ${totalPrice}
-                <StripeButton />
+                <StripeButton totalPrice={totalPrice} clearCart={clearCart}/>
+                <span>Test: Card number: 4242 4242 4242 4242, MM YY: 04/24 CVC: 424</span>
             </CheckoutFooter>
         </CartpageContainer>
     );

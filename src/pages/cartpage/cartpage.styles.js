@@ -24,19 +24,28 @@ export const EmptyCart = styled.div`
     text-align: center;
     font-size: 15px;
     margin-top: 200px;
+    @media (max-width: 800px) {
+        margin-top: 100px;
+    }
 `;
 
 export const CheckoutFooter = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    height: 75px;
     position: absolute;
     bottom: 60px;
     left: 0;
     right: 0;
     margin: auto;
     font-size: 17px;
+    span {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    @media (max-width: 800px) {
+        position: fixed;
+        bottom: 20px;
+    }
 `;
